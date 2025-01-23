@@ -1,0 +1,22 @@
+[project]
+name = "ubs-data-agent"
+version = "0.1.0"
+description = "Agent to convert UBS data"
+authors = [
+    {name = "Raja Shekar Reddy Siriganagari",email = "raja@insightfinder.com"}
+]
+license = {text = "MIT"}
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "pyyaml (>=6.0.2,<7.0.0)",
+    "pandas (>=2.2.3,<3.0.0)"
+]
+
+[project.scripts]
+ubs-data-agent = "ubs_data_agent.main:main"
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
