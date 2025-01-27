@@ -1,9 +1,9 @@
 mappings:
   efx_to_ibdl:
     paths:
-      efx_data: "/tmp/ubs-data-agent-test/efx_*.csv"
-      ibdl_data: "/tmp/ubs-data-agent-test/ibdl_*.csv"
-      output: /tmp/ubs-data-agent-test/new_output.json
+      efx_data: "/data/processed_efx_*.csv"
+      ibdl_data: "/data/IBDL_*.csv"
+      output: /data/matches.json
 
     id_columns:
       - orderIntId
@@ -11,17 +11,3 @@ mappings:
       - eventType
       - datetime
       - instrumentId
-
-    transformations:
-      - target_column: orderIntId
-        source_column: orderId
-        type: transform
-        rule: orderId * 5
-      - target_column: eventType
-        source_column: eventType
-        type: asis
-      - target_column: datetime
-        source_column: timestamp
-        type: convert
-        
-

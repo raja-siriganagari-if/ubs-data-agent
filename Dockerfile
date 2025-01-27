@@ -14,4 +14,4 @@ COPY . .
 RUN poetry config virtualenvs.create false && poetry install --no-interaction --no-ansi
 
 # Set the default command to run your application
-CMD ["sleep", "10000"]
+CMD [ "sleep", "10000"]
