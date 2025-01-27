@@ -5,10 +5,10 @@ services:
     volumes:
       - /insightfinder/logFileReplay-csv-ubs/config.yaml:/etc/config/ubs_data_agent.yaml
       - /insightfinder/logFileReplay-csv-ubs:/data
-    environment:
-      - OPENBLAS_NUM_THREADS=1
-      - NUMEXPR_NUM_THREADS=1
-      - OMP_NUM_THREADS=1
-      - MKL_NUM_THREADS=1
+    # environment:
+    #   - OPENBLAS_NUM_THREADS=1
+    #   - NUMEXPR_NUM_THREADS=1
+    #   - OMP_NUM_THREADS=1
+    #   - MKL_NUM_THREADS=1
     
     
